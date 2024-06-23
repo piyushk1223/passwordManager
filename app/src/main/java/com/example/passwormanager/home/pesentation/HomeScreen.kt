@@ -138,6 +138,7 @@ fun HomeScreen() {
                     "Password",
                     onChange = { inputPassword = it })
                 Button(
+                    enabled = inputAccountName!="" && inputUserName!="" && inputPassword!="",
                     onClick = {
                         val encryptedAccountName = viewModel.encrypt(inputAccountName)
                         val encryptedUserName = viewModel.encrypt(inputUserName)
@@ -206,6 +207,7 @@ fun HomeScreen() {
                     horizontalArrangement = Arrangement.SpaceEvenly
                 ) {
                     Button(
+
                         onClick = {
                             alertDiaglog = true
                         },
@@ -311,7 +313,9 @@ fun HomeScreen() {
                         Text(text = "Cancel")
                     }
 
-                    TextButton(
+
+                    
+                    TextButton(enabled =editinputAccountName!="" && editinputUserName!="" && editinputPassword!="" ,
                         onClick = {
                             alertDiaglog = false
                             viewModel.Update(

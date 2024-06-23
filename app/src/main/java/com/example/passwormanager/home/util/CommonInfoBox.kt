@@ -115,7 +115,7 @@ fun PasswordInfoBox(title: String, content: String) {
                 }else{
                     Icon(
                         imageVector = Icons.Filled.VisibilityOff,
-                        contentDescription = "show",
+                        contentDescription = "dont show",
                         tint = Color.DarkGray
                     )
                 }
